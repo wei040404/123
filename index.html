@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消防勤務快速入口</title>
+    <style>
+        :root {
+            --fire-red: #d32f2f;
+            --water-blue: #0288d1;
+            --oxygen-gray: #455a64;
+            --alarm-orange: #f57c00;
+            --video-purple: #673ab7;
+            --cloud-teal: #009688;
+            --edit-pink: #c2185b; /* 影像剪輯專用色 */
+        }
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 90%;
+            max-width: 550px;
+            padding: 20px;
+        }
+        h1 {
+            grid-column: span 2;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+        }
+        .nav-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 130px;
+            text-decoration: none;
+            color: white;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.05);
+            text-align: center;
+        }
+        .nav-button:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.2);
+            border-color: rgba(255,255,255,0.3);
+        }
+        .nav-button span {
+            margin-top: 5px;
+        }
+
+        /* 顏色分配 */
+        .btn-fire  { background: var(--fire-red); }
+        .btn-water { background: var(--water-blue); }
+        .btn-ox    { background: var(--oxygen-gray); }
+        .btn-list  { background: var(--alarm-orange); }
+        .btn-video { background: var(--video-purple); }
+        .btn-cloud { background: var(--cloud-teal); }
+        .btn-edit  { background: var(--edit-pink); }
+
+        /* 第 7 個按鈕橫跨兩欄 */
+        .btn-edit {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 400px) {
+            .dashboard { grid-template-columns: 1fr; }
+            h1, .btn-edit { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+        <h1>🚒 勤務管理系統 🚒</h1>
+
+        <a href="https://tccfd200.quickconnect.to/sharing/ewvldWoPw" class="nav-button btn-fire" target="_blank">
+            <span>📸 火調照片</span>
+        </a>
+
+        <a href="https://www.google.com/maps/d/u/0/edit?hl=zh-TW&mid=1U47yx3OCas7OQoK0Lr4GzBlCA1A&ll=24.140317954186422%2C120.70343587929847&z=17" class="nav-button btn-water" target="_blank">
+            <span>📍 水源地圖</span>
+        </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1Rh-8hAtzcMaQl1UNm2aSVOIaoOi2L8cA/edit" class="nav-button btn-ox" target="_blank">
+            <span>🧪 鋼瓶更換</span>
+        </a>
+
+        <a href="https://docs.google.com/spreadsheets/d/1kCAaGRusMmRJqsVhzDDvUd_ze3ZQLocN/edit" class="nav-button btn-list" target="_blank">
+            <span>📋 住警器清冊</span>
+        </a>
+
+        <a href="https://drive.google.com/drive/u/0/folders/1DRjaIW3rO4T4EP6HzvJu2ruVNFuVvuCp" class="nav-button btn-video" target="_blank">
+            <span>📹 行車影像下載</span>
+        </a>
+
+        <a href="https://drive.google.com/drive/u/2/folders/1QhdDSkME6r_MW-cP6moRxuV9oUsLy15u" class="nav-button btn-cloud" target="_blank">
+            <span>🔥 SCBA電量查看操作</span>
+        </a>
+
+        <a href="https://drive.google.com/drive/u/2/folders/1HocOcJCDdDy6lJbcP1imEgutKg2022V1" class="nav-button btn-edit" target="_blank">
+            <span>🎬 影像剪輯</span>
+        </a>
+    </div>
+
+</body>
+</html>
